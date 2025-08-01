@@ -13,11 +13,14 @@ A lot of those scripts have the purpose to make links shorter as Geneanet has a
 bug in its gedcom import feature as it add a space in the link (thus breaking
 it) if the link happens to be on multiple lines in the gedcom file.
 Eg:
+```
 1 WWW https://gw.geneanet.org/alsen?lang=fr&pz=josephine&nz=seneterre&p=michel
 2 CONC &n=meylheuc
-
+```
 would result in the following link in genenanet:
-"https://gw.geneanet.org/alsen?lang=fr&pz=josephine&nz=seneterre&p=michel &n=meylheuc"
+```
+https://gw.geneanet.org/alsen?lang=fr&pz=josephine&nz=seneterre&p=michel &n=meylheuc
+```
 
 ### remove-lang=fr.script
 
