@@ -22,7 +22,7 @@ would result in the following link in genenanet:
 https://gw.geneanet.org/alsen?lang=fr&pz=josephine&nz=seneterre&p=michel &n=meylheuc
 ```
 
-### remove-lang=fr.script
+### remove-lang-arg.script
 
 This script removes the lang=fr parameter from links, thus making them shorter.
 
@@ -31,7 +31,7 @@ This script removes the lang=fr parameter from links, thus making them shorter.
 This script removes the pz=<fist_name> & nz=<given_name> parameters from links,
 thus making them shorter.
 
-### remove-type=.script
+### remove-type-arg.script
 
 This script removes the type=fiche parameter from links, thus making them shorter.
 
