@@ -2,7 +2,7 @@
 
 A cople super-tool scripts I wrote and that I found useful for my workflow.
 
-Super-Tool is an Isotammi addons for Gramps.
+Super-Tool is an Isotammi addons for [Gramps](https://gramps-project.org/).
 See:
 * https://www.gramps-project.org/wiki/index.php/Addon:Isotammi_addons#SuperTool
 * https://github.com/Taapeli/isotammi-addons/blob/master/source/SuperTool/README.md
