@@ -43,7 +43,7 @@ those links were invalid.
 
 ## Name normalization scripts
 
-Those scripts are about normalize names regarding "Le" prefix which is used eg
+Those scripts normalize names regarding "Le" prefix which is used eg
 in Britanny.
 They are usefull after importing some Geneanet subtrees in my own tree.
 
