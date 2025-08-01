@@ -2,10 +2,10 @@
 version=1
 
 [title]
-SuperTool-People: set Calvar private (WORKS)
+SuperTool-People: set Calvar private
 
 [description]
-Set Calvar links private
+Set Calvar links private after the tree went private/offline/deleted(?)
 
 [category]
 People

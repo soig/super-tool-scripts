@@ -2,7 +2,7 @@
 version=1
 
 [title]
-SuperTool-People: split eg "Le Roux" => "Le" + "Roux" v2
+SuperTool-People: split eg "Le Roux" => "Le" + "Roux"
 
 [description]
 Split "Le" Prefix from 'name' field into 'prefix' field

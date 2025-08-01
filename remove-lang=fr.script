@@ -5,7 +5,7 @@ version=1
 SuperTool-People: remove lang=fr from URLs
 
 [description]
-Set Calvar links private
+This removes either "&lang=XX" or "lang=XX&" from geneanet URLs
 
 [category]
 People

@@ -5,7 +5,7 @@ version=1
 SuperTool-People: remove pz/nz from URLs v2 (both order)
 
 [description]
-Set Calvar links private
+This removes both "nz=foo" or "pz=bar" from geneanet URLs, which exposes the identity of the tree owner.
 
 [category]
 People
