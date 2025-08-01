@@ -41,17 +41,16 @@ those links were invalid.
 ## Name normalization scripts
 
 Those scripts are about normalize names regarding "Le" prefix which is used eg
-in Britanny:
+in Britanny.
+They are usefull after importing some Geneanet subtrees in my own tree.
 
 ### split-Le+Roux-in-Le-Roux.script
 
-This script is usefull after importing some Geneanet subtrees in my own tree.
 It splits names such as "Le Roux" into "Le" prefix and "Roux" name.
 One could fork it in order to do same for gentlement & ladies ("De …").
 
 ### split-Roux-Le-in-Le-Roux.script
 
-This script is usefull after importing some Geneanet subtrees in my own tree.
 It splits names such as "Roux (Le)" into "Le" prefix and "Roux" name.
 One could fork it in order to do same for gentlement & ladies ("De …").
 
