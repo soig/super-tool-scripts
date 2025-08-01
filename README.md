@@ -33,7 +33,7 @@ thus making them shorter.
 
 ### remove-type=.script
 
-This script removes the type=fche parameter from links, thus making them shorter.
+This script removes the type=fiche parameter from links, thus making them shorter.
 
 ### set-link-private.script
 
