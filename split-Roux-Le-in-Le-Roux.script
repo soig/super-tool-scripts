@@ -1,0 +1,63 @@
+[Gramps SuperTool script file]
+version=1
+
+[title]
+SuperTool-People: split eg "Roux (Le)" => "Le" + "Roux"
+
+[description]
+Split "Le" Prefix from 'name' field into 'prefix' field
+
+[category]
+People
+
+[initial_statements]
+
+[statements]
+p = db.get_person_from_handle(handle)
+pn = p.get_primary_name()
+sl = pn.get_surname_list()
+trouve = False
+for sn in sl:
+    prefixe = sn.get_prefix()
+    nom_famille = sn.get_surname()
+    print(''.join(["> Considering '", nom_famille, "', prefixe='", prefixe, "'"]))
+    #print("> prefix?", "true" if not prefixe else "false") # and re.search(' \\(Le\\)$ ', nom_famille):
+    print("> search(Le)?", "true" if re.search(' (Le)$', nom_famille) else "false")
+
+    if not prefixe and re.search(' \\(Le\\)$', nom_famille):
+        print(" ==> will DO for ", nom_famille)
+        sn.set_prefix('Le')
+        sn.set_surname(re.sub(' \\(Le\\)$', '', nom_famille))
+        print("< BEFORE: '", nom_famille, "' VS AFTER: '", sn.get_surname(), "'")
+        trouve = True
+if trouve:
+    print(">> trouvé!")
+    pn.set_surname_list(sl)
+    # commit won't do anything w/o this: NOPE still not enough (The BUG was the "commit changes" checkbox : if unchecked, commit_person() actually works:
+    p.set_primary_name(pn)
+    print("--> CHECK:")
+    print(sl)
+    print(pn)
+#    for sn in sl:
+    for sn in p.get_primary_name().get_surname_list():
+        print("------> '", sn.get_surname(), "'")
+    db.commit_person(p, trans)
+
+[filter]
+re.search(' \\(Le\\)$', surname)
+
+[expressions]
+name, gender,  birth.date
+
+[scope]
+all
+
+[unwind_lists]
+False
+
+[commit_changes]
+False
+
+[summary_only]
+False
+

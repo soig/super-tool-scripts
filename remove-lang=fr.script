@@ -1,0 +1,45 @@
+[Gramps SuperTool script file]
+version=1
+
+[title]
+SuperTool-People: remove lang=fr from URLs
+
+[description]
+Set Calvar links private
+
+[category]
+People
+
+[initial_statements]
+
+[statements]
+# TODO: clean links in notes too
+if person.urls:
+    for u in person.urls:
+       # eg: https://gw.geneanet.org/boijentin?lang=fr&nz=boijentin&p=francois&n=gazaille
+        if "lang=" in u.path:
+             # if not first arg :
+             path = re.sub('&lang=[^&]*', '', u.path)
+             # remove in first position too:
+             path = re.sub('lang=[^&]*&', '', path)
+             u.set_path(path)
+             db.commit_person(person, trans)
+
+[filter]
+person.urls
+
+[expressions]
+name, gender,  birth.date
+
+[scope]
+all
+
+[unwind_lists]
+False
+
+[commit_changes]
+False
+
+[summary_only]
+False
+
